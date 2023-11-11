@@ -1,9 +1,8 @@
-# vim --version 查看vim是否支持~/.vim/vimrc路径；如果不支持则拷贝vimrc到~/.vimrc
-
-# 安装clang，vim的ale插件对C/C++需要(clang很多系统会自带)
-
 # 需要安装nerd-fonts字体
 
+#----------------------------------------------------------------------------------------------------
+#                   shell 相关
+#----------------------------------------------------------------------------------------------------
 # 安装tmux
 sudo dnf install tmux
 # 拷贝tmux.conf 到 ~/.tmux.conf
@@ -39,8 +38,12 @@ sudo dnf install bat
 sudo dnf install ag
 sudo dnf install ripgrep
 
-# 安装python3头文件，安装leaderf的C扩展需要
-sudo dnf install python3-devel.x86_64
+#----------------------------------------------------------------------------------------------------
+#                   vim 相关
+#----------------------------------------------------------------------------------------------------
+# vim --version 查看vim是否支持~/.vim/vimrc路径；如果不支持则拷贝vimrc到~/.vimrc
+
+# 安装clang，vim的ale插件对C/C++需要(clang很多系统会自带)
 
 # 源码编译安装gtags
 # 依赖 automake, autoconf, gperf, bison and flex
@@ -62,7 +65,7 @@ make -j
 sudo make install
 # 将tags的bin目录和lib目录添加到环境变量中 
 # /etc/profile
-export PATH=$PATH:/usr/local/gtags.6.6.10/bin/
+suod echo "export PATH=$PATH:/usr/local/gtags.6.6.10/bin/" >> /etc/profile
 source /etc/profile
 # /etc/ld.so.conf
 /usr/local/gtags.6.6.10/lib/gtags/
@@ -72,3 +75,9 @@ ldconfig
 # 需要安装nodejs 和 yarn
 sudo dnf install nodejs
 sudo npm install --global yarn
+
+# 安装python3头文件，安装leaderf的C扩展需要
+sudo dnf install python3-devel.x86_64
+
+# 编译安装YCM
+# TODO
