@@ -114,7 +114,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " 手动设置折叠
 set foldmethod=manual
 " 启动 Vim 时关闭折叠
-" set nofoldenable
+set nofoldenable
 
 "===============================================================================================
 " 		   允许vim自带脚本根据文件类型自动设置缩进等                               
@@ -157,7 +157,7 @@ endif
 " " 保存时备份
 " set writebackup
 " " 备份文件地址，统一管理
-" set backupdir=~/.vim/tmp
+" set backupdir=~/.cache/vimtmp
 " " 备份文件扩展名
 " set backupext=.bak
 "  禁用交换文件
@@ -165,7 +165,10 @@ set noswapfile
 " 禁用 undo文件
 set noundofile
 " 创建目录，并且忽略可能出现的警告
-silent! call mkdir(expand('~/.vim/tmp'), "p", 0755)
+silent! call mkdir(expand('~/.cache/vimtmp'), "p", 0755)
+
+" 将全角字符的宽度设置为两个字符宽度
+set ambiwidth=double
 
 "===============================================================================================
 "                  打开文件时恢复上一次光标所在位置                                        

@@ -23,10 +23,18 @@ set rtp+=~/.vim
 "======================================================================
 
 " 加载基础配置
-LoadScript init/init_base.vim
+LoadScript init/init_base_config.vim
 
-" 插件加载
-LoadScript init/init_plugs.vim
+" 加载安装插件的配置
+LoadScript init/init_install_plugs.vim
+
+" 加载让vim更漂亮的插件的配置
+LoadScript init/init_display_plugs.vim
 " 配置主题时有些配置项不生效, 需要执行一下source
-source ~/.vim/vim-init/init/init_plugs.vim 
+source ~/.vim/vim-init/init/init_display_plugs.vim 
 
+" 加载方便coding的插件配置
+LoadScript init/init_coding_plugs.vim
+
+" 加载方便coding的插件配置
+LoadScript init/init_markdown_plugs.vim
