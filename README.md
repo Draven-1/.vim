@@ -15,7 +15,7 @@ TODO 一些还未完成的工作
 
     git clone https://github.com/Draven-1/.vim.git 
 
-    安装vim配置相关的依赖，安装完成后，启动vim 在命令行执行 PlugInstall 安装vim插件。
+    安装vim配置相关的依赖查看install.sh，安装完成后，启动vim 在命令行执行 PlugInstall 安装vim插件。
 
     安装的插件查看 vim-init/init/init_install_plugs.vim。
 
