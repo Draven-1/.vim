@@ -33,7 +33,7 @@ source ~/.zshrc
 # 安装nvim 暂时不用，以后有兴趣再用
 # sudo dnf install neovim python3-neovim
 
-# 安装一些好用又好用的命令 TODO
+# 安装一些好用又好看的命令 TODO
 sudo dnf install bat 
 sudo dnf install ag
 sudo dnf install ripgrep
