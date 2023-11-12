@@ -3,6 +3,8 @@
 
 本次主要是参照韦大大的 Vim 配置框架 ( https://github.com/skywind3000/vim-init ) 将vim配置分类整理并从头将使用的开发工具相关配置梳理了一遍。
 
+欢迎大家进vim中文交流群学习，里面大佬技术又好说话又好听。https://t.me/vimzh_rea
+
 TODO 一些还未完成的工作
 * install.sh脚本还不能使用，相关依赖需要参照手动install.sh安装，安装时需要稳定的科学上网。
 * ale代码语法语义检查目前只支持c/c++，其他语言还未配置。
