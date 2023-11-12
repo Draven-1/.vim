@@ -80,4 +80,28 @@ sudo npm install --global yarn
 sudo dnf install python3-devel.x86_64
 
 # 编译安装YCM
-# TODO
+# YCM的依赖详情 https://github.com/ycm-core/YouCompleteMe#requirements
+# 安装go
+sudo dnf install go
+# 安装java
+sudo dnf install java
+
+# 其他依赖我的系统上已经有了 Fedora 38
+# 下载ycm源码
+cd ~/.vim/plugged
+git clone https://github.com/ycm-core/YouCompleteMe.git
+cd YouCompleteMe/
+# 开始编译，我选择的是YCM支持的所有语言，可以根据个人需求进行编译，支持的少需要的依赖也就少，编译也会相对简单
+python3 install.py --all
+
+# 问题
+'''
+1. ❯ python3 install.py --all                                                                                    
+File /home/lc/.vim/plugged/YouCompleteMe/third_party/ycmd/build.py does not exist; you probably forgot to run:
+        git submodule update --init --recursive                                                               
+
+按照提示执行 git submodule update --init --recursive
+成之后 重新执行 python3 install.py --all
+'''
+
+# 由于YCM比较大，就不把他放到git上了
