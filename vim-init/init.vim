@@ -36,5 +36,5 @@ source ~/.vim/vim-init/init/init_display_plugs.vim
 " 加载方便coding的插件配置
 LoadScript init/init_coding_plugs.vim
 
-" 加载方便coding的插件配置
+" 加载markdown编写和预览的插件配置
 LoadScript init/init_markdown_plugs.vim
