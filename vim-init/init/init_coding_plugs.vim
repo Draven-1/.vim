@@ -18,7 +18,7 @@ let $GTAGSCONF = '/usr/local/gtags.6.6.10/share/gtags/gtags.conf'
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 " 所生成的数据文件的名称
 let g:gutentags_ctags_tagfile = '.tags'
-" 同时开启 ctags 和 gtags 支持： 开启ctags会产生tags文件在项目目录中
+" 同时开启 ctags 和 gtags 支持： 
 " let g:gutentags_modules = []
 " if executable('ctags')
 "    let g:gutentags_modules += ['ctags']
