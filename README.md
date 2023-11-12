@@ -19,8 +19,13 @@ TODO 一些还未完成的工作
     安装的插件查看 vim-init/init/init_install_plugs.vim。
 
     为了正常显示需要安装nerd-fonts字体。详情查看 https://github.com/ryanoasis/nerd-fonts
-  
-![ycm_install_success](https://github.com/Draven-1/.vim/assets/54003179/461f1b3b-353e-4031-b0e8-111e5b5ddc78)
+
+    YCM的安装过程和安装成功
+    ![ycm_install_success](https://github.com/Draven-1/.vim/assets/54003179/461f1b3b-353e-4031-b0e8-111e5b5ddc78)
+    ale的语法语义检查效果
+    ![ale](https://github.com/Draven-1/.vim/assets/54003179/f79f9cb9-7625-438d-a4b2-cb9fc06f6614)
+    YCM的补全效果
+    ![ycm_complete](https://github.com/Draven-1/.vim/assets/54003179/68535f5c-8a80-4dbc-af4f-39244c67658d)
 
 ## shell
 * tmux 
