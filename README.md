@@ -1,7 +1,7 @@
 # dotvim
 我的开发环境配置
 
-本次主要是参照韦大大的 Vim 配置框架(https://github.com/skywind3000/vim-init)从头将我的开发工具梳理了一遍。
+本次主要是参照韦大大的 Vim 配置框架 ( https://github.com/skywind3000/vim-init ) 从头将我的开发工具梳理了一遍。
 
 TODO 一些还未完成的工作
 * install.sh脚本还不能使用，相关依赖需要参照手动install.sh安装，安装时需要稳定的科学上网。
