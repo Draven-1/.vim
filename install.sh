@@ -34,9 +34,16 @@ source ~/.zshrc
 # sudo dnf install neovim python3-neovim
 
 # 安装一些好用又好看的命令 TODO
-sudo dnf install bat 
-sudo dnf install ag
-sudo dnf install ripgrep
+sudo dnf install bat            # cat 
+sudo dnf install ag             # grep 
+sudo dnf install ripgrep        # grep  支持按文件编码搜索
+sudo dnf install lsd            # ls
+sudo npm install gtop -g        # top
+sudo dnf copr enable atim/bottom -y
+sudo dnf install bottom         # top
+dnf install hyperfine           # 压测工具
+
+
 
 #----------------------------------------------------------------------------------------------------
 #                   vim 相关
