@@ -174,18 +174,18 @@ set ambiwidth=double
 "                  打开文件时恢复上一次光标所在位置                                        
 "                  最新的vim已经默认支持此功能                                             
 "===============================================================================================
-" autocmd BufReadPost *
-" 	\ if line("'\"") > 1 && line("'\"") <= line("$") |
-" 	\	 exe "normal! g`\"" |
-" 	\ endif
+autocmd BufReadPost *
+	\ if line("'\"") > 1 && line("'\"") <= line("$") |
+	\	 exe "normal! g`\"" |
+	\ endif
 
 "===============================================================================================
 "                  定义一个 DiffOrig 命令用于查看文件改动                                 
 "===============================================================================================
-" if !exists(":DiffOrig")
-"     command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-"         \ | wincmd p | diffthis
-" endif
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+        \ | wincmd p | diffthis
+endif
 
 "===============================================================================================
 "                  自定义的一些快捷键
