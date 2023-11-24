@@ -24,6 +24,7 @@ set rtp+=~/.vim
 
 " 加载基础配置
 LoadScript init/init_base_config.vim
+source ~/.vim/vim-init/init/init_base_config.vim
 
 " 加载安装插件的配置
 LoadScript init/init_install_plugs.vim
