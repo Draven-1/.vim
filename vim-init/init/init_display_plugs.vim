@@ -150,6 +150,8 @@ let g:bufferline_active_buffer_right = ']'
 " 显示buffer编号
 " let g:bufferline_show_bufnr = 1
 
+" 缓冲区是否应自动回显到命令栏
+let g:bufferline_echo = 0     
 "-----------------------------------------------------------------------------------------------
 "                  tabline                                                      
 "                  tabline配置                                                    
