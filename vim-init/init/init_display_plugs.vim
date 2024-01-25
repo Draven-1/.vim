@@ -189,6 +189,10 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 " 搭配airline themes的oceanicnext
 let g:airline_theme='oceanicnext'
 
+" 主题设置之后，否则会被覆盖
+hi cursorLine gui=BOLD guibg=NONE guifg=NONE cterm=BOLD ctermbg=black ctermfg=NONE  
+hi cursorcolumn gui=BOLD guibg=NONE guifg=NONE cterm=BOLD ctermbg=black ctermfg=NONE
+
 " 2. flattened 很好
 " colorscheme flattened_dark
 " color flattened_dark                      
