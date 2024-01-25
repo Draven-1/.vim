@@ -128,10 +128,15 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'dense-analysis/ale'
 
 "-----------------------------------------------------------------------------------------------
-"                  vim-snippets 
+"                  ultisnips
+"                  vim-snippets
+"                  copilot.vim
 "                  代码片段
 "-----------------------------------------------------------------------------------------------
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'github/copilot.vim'
+
 
 "-----------------------------------------------------------------------------------------------
 "                  markdown 相关插件
