@@ -36,7 +36,8 @@ TODO 一些还未完成的工作
 * ag 和 rg 代替grep的命令
 * bat 代替cat的命令
 
-## windows terminal
+## windows terminal相关配置 
+TODO
 
 
 
