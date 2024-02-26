@@ -54,7 +54,7 @@ dnf install hyperfine           # 压测工具
 
 # 源码编译安装gtags
 # 依赖 automake, autoconf, gperf, bison and flex
-sudo dnf automake autoconf install gpref bison flex
+sudo dnf install automake autoconf install gpref bison flex
 # 安装pygments
 pip install pygments
 # 安装ctags
@@ -83,7 +83,7 @@ ldconfig
 sudo dnf install nodejs
 sudo npm install --global yarn
 
-# 安装python3头文件，安装leaderf的C扩展需要
+# 安装python3头文件，安装leaderf的C扩展需要 :LeaderfInstallCExtension
 sudo dnf install python3-devel.x86_64
 
 # 编译安装YCM
