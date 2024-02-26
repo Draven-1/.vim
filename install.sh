@@ -54,7 +54,7 @@ dnf install hyperfine           # 压测工具
 
 # 源码编译安装gtags
 # 依赖 automake, autoconf, gperf, bison and flex
-sudo dnf install automake autoconf install gpref bison flex
+sudo dnf install automake autoconf gperf bison flex
 # 安装pygments
 pip install pygments
 # 安装ctags
