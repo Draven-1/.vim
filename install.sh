@@ -56,15 +56,18 @@ dnf install hyperfine           # 压测工具
 # 依赖 automake, autoconf, gperf, bison and flex
 sudo dnf install automake autoconf gperf bison flex
 # 安装pygments
+sudo dnf install pip     |  sudo apt install universal-ctags
 pip install pygments
+# ubuntu需要在~/.bashrc文中添加 source /etc/profile
+source ~/.bashrc
 # 安装ctags
 sudo dnf install ctags
 # 安装libtool的头文件
-sudo dnf install libtool-ltdl-devel.x86_64
+sudo dnf install libtool-ltdl-devel.x86_64  | sudo apt install libtool  -y  sudo apt-get install libtool-bin
 # 安装ncurses的头文件
-sudo dnf install ncurses-devel.x86_64
+sudo dnf install ncurses-devel.x86_64     |  sudo apt-get install libncurses5  sudo apt-get install libncurses5-dev libncursesw5-dev 
 # 还需要安装makeinfo
-sudo dnf install texinfo
+sudo dnf install texinfo   | sudo apt install texinf
 # 编译
 sh reconf.sh
 ./configure --prefix=/usr/local/gtags.6.6.10  # 将安装在/usr/local/gtags.6.6.10目录下
@@ -80,18 +83,25 @@ ldconfig
 
 # vim的markdown相关插件需要安装的依赖
 # 需要安装nodejs 和 yarn
-sudo dnf install nodejs
+sudo dnf install nodejs   | sudo apt install nodejs npm
 sudo npm install --global yarn
 
 # 安装python3头文件，安装leaderf的C扩展需要 :LeaderfInstallCExtension
 sudo dnf install python3-devel.x86_64
 
+# ubuntu 升级 vim8 为 vim9
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt upgrade -y
+# ubuntu 安装rust
+sudo apt install rustc cargo
+
 # 编译安装YCM
 # YCM的依赖详情 https://github.com/ycm-core/YouCompleteMe#requirements
 # 安装go
-sudo dnf install go
+sudo dnf install go  | sudo apt install golang-go
 # 安装java
-sudo dnf install java
+sudo dnf install java   
 
 # 其他依赖我的系统上已经有了 Fedora 38
 # 下载ycm源码
