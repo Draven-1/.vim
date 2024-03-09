@@ -133,3 +133,5 @@ alias fstmux="find * | fzf-tmux -p 60%,50% --prompt 'All> ' \
 alias fvim="fzf --print0 | xargs -0 -o vim"
 
 alias fmvim="fzf -m --print0 | xargs -0 -o vim"
+
+source /etc/profile
