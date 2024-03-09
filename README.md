@@ -1,5 +1,6 @@
 ## 介绍
 我的开发环境配置
+支持 centos系列  ubuntu系列
 
 本次主要是参照韦大大的 Vim 配置框架 ( https://github.com/skywind3000/vim-init ) 将vim配置分类整理并从头将使用的开发工具相关配置梳理了一遍。
 
