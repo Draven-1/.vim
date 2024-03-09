@@ -58,8 +58,8 @@ sudo dnf install automake autoconf gperf bison flex
 # 安装pygments
 sudo dnf install pip     |  sudo apt install universal-ctags
 pip install pygments
-# ubuntu需要在~/.bashrc文中添加 source /etc/profile
-source ~/.bashrc
+# ubuntu需要在~/.zshrc文中添加 source /etc/profile
+source ~/.zshrc
 # 安装ctags
 sudo dnf install ctags
 # 安装libtool的头文件
