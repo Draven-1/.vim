@@ -201,4 +201,7 @@ nnoremap <F3> :set nopaste<CR>
 nnoremap <F4> :set paste<CR>
 " 关闭打开的缓冲区,除了当前缓冲区
 nnoremap <leader>ta :w <bar> %bd <bar> e# <bar> bd# <CR>
+" 查看当前文件的路径
+nnoremap <F12> :echo expand('%:p')<CR>
+
 
