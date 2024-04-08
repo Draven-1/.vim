@@ -135,7 +135,8 @@ Plug 'dense-analysis/ale'
 "-----------------------------------------------------------------------------------------------
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
+Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 
 
 "-----------------------------------------------------------------------------------------------

@@ -185,10 +185,13 @@ let g:ale_sign_warning = '😨'                    " 设置警告提示符
 "                  ultisnips
 "                  vim-snippets
 "                  copilot.vim  (正式版要收费)
+"                  codeium.vim
 "                  代码片段
 "-----------------------------------------------------------------------------------------------
 " TODO 以后再配
 let g:UltiSnipsExpandTrigger="<a-p>"
+let g:codeium_disable_bindings = 0
+imap <script><silent><nowait><expr> <C-s> codeium#Accept()
 
 "-----------------------------------------------------------------------------------------------
 "                  ycm
@@ -198,7 +201,7 @@ let g:UltiSnipsExpandTrigger="<a-p>"
 " 设置YCM的运行路径(此处需要绝对路径, 因此需要改成自己的)
 set rtp+=/home/lc/.vim/plugged/YouCompleteMe
 
-" ycm在c/c++项目中使用时需要自己手动设置头文件路径 详情参考: 
+" ycm在c/c++项目中使用时需要自己手动设置头文件路径 详情参考:
 " https://github.com/ycm-core/YouCompleteMe/blob/master/doc/youcompleteme.txt
 
 let g:ycm_global_ycm_extra_conf = '.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
