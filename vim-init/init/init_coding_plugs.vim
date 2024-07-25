@@ -140,15 +140,27 @@ let g:cpp_concepts_highlight = 1
 "                  代码语法和语义检查插件 得搭配个语言相关的插件一起配置使用
 "-----------------------------------------------------------------------------------------------
 " TODO
-" " Only run linters named in ale_linters settings.
-" let g:ale_linters_explicit = 1
-" let g:ale_sign_column_always = 1
-" let g:airline#extensions#ale#enabled = 1
-" " Set this in your vimrc file to disabling highlighting
-" let g:ale_set_highlights = 1
-" let g:ale_echo_msg_format = '[%linter%] %code: %%s [%severity%]'
+let g:ale_enabled = 1     " 关闭ale        
+let g:ale_sign_column_always = 1           
+let g:airline#extensions#ale#enabled = 1   
+" 确保 ALE 高亮被激活                      
+let g:ale_set_highlights = 1               
+highlight ALEWarning ctermbg=DarkMagenta   
+" " 设置 ALE 错误消息的高亮颜色为红色      
+" highlight ALEError ctermbg=NONE ctermfg=NONE guibg=red guifg=red
+" " 设置 ALE 警告消息的高亮颜色为黄色      
+" highlight ALEWarning ctermbg=NONE ctermfg=NONE guibg=yellow guifg=yellow
+                                           
+let g:ale_echo_msg_format = '[%linter%] %code: %%s [%severity%]'
+                                           
 let g:ale_sign_error = '😡'                      " 设置报错提示符
 let g:ale_sign_warning = '😨'                    " 设置警告提示符
+" 禁用空白警告                             
+let g:ale_warn_about_trailing_whitespace = 0
+ 
+let g:ale_cpp_cc_options = '-std=c++14 -Wall -Wno-comment'                
+let g:ale_c_cc_options = '-std=c11 -Wall'  
+
 " " nmap <silent> <C-u> <Plug>(ale_previous_wrap)
 " " nmap <silent> <C-d> <Plug>(ale_next_wrap)
 " let g:ale_set_loclist = 0
