@@ -280,3 +280,64 @@ let g:ycm_filetype_whitelist = {
             \ "lua":1,
             \}
 
+
+" 查找compile_commands.json,并设置ALE
+" 查找路径: ~/.cache/ale/ + 项目路径去除~/
+function! FindCompileCommands()
+    " 获取当前文件的完整路径
+    let l:current_file_path = expand('%:p')
+    " 获取用户主目录的路径
+    let l:user_home = expand('~')
+    " 替换当前文件路径中的用户主目录部分为缓存目录路径
+    let l:cache_path = substitute(l:current_file_path, l:user_home, l:user_home . '/.cache/ale', '
+    " 构建 compile_commands.json 的最终路径
+    let l:final_path = l:cache_path . '/compile_commands.json'
+ 
+    " 检查此路径下是否存在 compile_commands.json
+    if filereadable(l:final_path)
+        return l:final_path
+    endif
+ 
+    " 如果未找到，尝试在父目录中查找
+    let l:current_dir = getcwd()
+    while isdirectory(l:current_dir)
+        let l:cache_dir = substitute(l:current_dir, l:user_home, l:user_home . '/.cache/ale', '')
+        let l:command_json_path = l:cache_dir . '/compile_commands.json'
+        if filereadable(l:command_json_path)
+            return l:command_json_path
+        endif
+        " 检查是否已经到达文件系统根目录
+        if l:current_dir == fnamemodify(l:current_dir, ':h')
+            break
+        endif
+        " 向上移动一个目录
+        let l:current_dir = fnamemodify(l:current_dir, ':h')
+    endwhile
+ 
+    " 所有尝试均未找到文件
+    return ''
+endfunction
+ 
+ 
+function! SetCompileCommandsForALE()
+    " 查找 compile_commands.json 文件
+    let l:json_path = FindCompileCommands()
+ 
+    " 如果找到文件，则设置 ALE 选项
+    if !empty(l:json_path)
+        let b:ale_c_clangd_options = '-p ' . l:json_path
+        let b:ale_cpp_clangd_options = '-p ' . l:json_path
+        let b:ale_c_clangtidy_options = '-p ' . l:json_path
+        let b:ale_cpp_clangtidy_options = '-p ' . l:json_path
+        let b:ale_c_cppcheck_options = '--project=' . l:json_path
+        let b:ale_cpp_cppcheck_options = '--project=' . l:json_path
+    else
+        echohl WarningMsg
+        echon "compile_commands.json not found in any parent directories."
+        echohl None
+    endif
+endfunction
+ 
+" 对 C 和 C++ 文件设置自动命令
+autocmd FileType c,cpp call SetCompileCommandsForALE()
+                                                                                                  
