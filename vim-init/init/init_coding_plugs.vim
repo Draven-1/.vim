@@ -332,9 +332,9 @@ function! SetCompileCommandsForALE()
         let b:ale_c_cppcheck_options = '--project=' . l:json_path
         let b:ale_cpp_cppcheck_options = '--project=' . l:json_path
     else
-        echohl WarningMsg
-        echon "compile_commands.json not found in any parent directories."
-        echohl None
+        " echohl WarningMsg
+        " echon "compile_commands.json not found in any parent directories."
+        " echohl None
     endif
 endfunction
  
