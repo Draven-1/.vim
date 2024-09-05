@@ -102,6 +102,9 @@ let g:Lf_PopupHeight = 0.3
 " Show icons, icons are shown by default
 let g:Lf_ShowDevIcons = 1
 
+" fzf               
+noremap <c-m> :Marks<cr>
+
 " 上面的快捷键已经有了
 " noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 " noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
