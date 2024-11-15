@@ -1,4 +1,41 @@
 "-----------------------------------------------------------------------------------------------
+"                  coc
+"                  代码补全
+"-----------------------------------------------------------------------------------------------
+" inoremap <silent><expr> <TAB>
+"       \ coc#pum#visible() ? coc#pum#next(1) :
+"       \ CheckBackspace() ? "\<Tab>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+"
+" " Make <CR> to accept selected completion item or notify coc.nvim to format
+" " <C-g>u breaks current undo, please make your own choice
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"
+" function! CheckBackspace() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+"
+" " Use <c-space> to trigger completion
+" if has('nvim')
+"   inoremap <silent><expr> <c-space> coc#refresh()
+" else
+"   inoremap <silent><expr> <c-@> coc#refresh()
+" endif
+"
+" " Use `[g` and `]g` to navigate diagnostics
+" " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+" nmap <silent> [g <Plug>(coc-diagnostic-prev)
+" nmap <silent> ]g <Plug>(coc-diagnostic-next)
+"
+" nmap <silent> <c-k> <Plug>(coc-definition)
+" nmap <silent> <a-y> <Plug>(coc-type-definition)
+" nmap <silent> <a-i> <Plug>(coc-implementation)
+" nmap <silent> <c-q> <Plug>(coc-references)
+
+"-----------------------------------------------------------------------------------------------
 "                  vim-gutentags
 "                  gutentags_plus
 "                  管理ctags和gtags文件的插件
@@ -8,10 +45,10 @@
 " gtags
 set cscopetag                           "使用 cscope 作为 tags 命令
 set cscopeprg='gtags-cscope'            "使用 gtags-cscope 代替 cscope
-let g:gutentags_define_advanced_commands = 1
 let $GTAGSLABEL = 'native-pygments'
 " let $GTAGSLABEL='native'
-let $GTAGSCONF = '/usr/local/gtags.6.6.11/share/gtags/gtags.conf'
+let g:gutentags_define_advanced_commands = 1
+let $GTAGSCONF = '/usr/local/gtags/share/gtags/gtags.conf'
 
 " gutentags
 " 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
@@ -102,8 +139,8 @@ let g:Lf_PopupHeight = 0.3
 " Show icons, icons are shown by default
 let g:Lf_ShowDevIcons = 1
 
-" fzf               
-noremap <c-m> :Marks<cr>
+" fzf
+noremap <leader>m :Marks<cr>
 
 " 上面的快捷键已经有了
 " noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
@@ -124,45 +161,65 @@ noremap <c-m> :Marks<cr>
 "                  cpp-enhanced-highlight
 "                  C++语法高亮插件(比vim自身提供的更丰富)
 "-----------------------------------------------------------------------------------------------
-" 启用类范围的高亮
-let g:cpp_class_scope_highlight = 1
-" 启用成员变量高亮
-let g:cpp_member_variable_highlight = 1
-" 启用类名高亮
-let g:cpp_class_decl_highlight = 1
-" 启用POSIX函数高亮
-let g:cpp_posix_standard = 1
-" 启用模板高亮(大文件可能有点慢, 有更快的但那个可能不起作用)
-let g:cpp_experimental_simple_template_highlight = 1
+" " 启用类范围的高亮
+" let g:cpp_class_scope_highlight = 1
+" " 启用成员变量高亮
+" let g:cpp_member_variable_highlight = 1
+" " 启用类名高亮
+" let g:cpp_class_decl_highlight = 1
+" " 启用POSIX函数高亮
+" let g:cpp_posix_standard = 1
+" " 启用模板高亮(大文件可能有点慢, 有更快的但那个可能不起作用)
+" let g:cpp_experimental_simple_template_highlight = 1
+"
+" " 这将高亮显示关键字 concept 和 requires 以及标准库中所有已命名的需求
+" let g:cpp_concepts_highlight = 1
 
-" 这将高亮显示关键字 concept 和 requires 以及标准库中所有已命名的需求
-let g:cpp_concepts_highlight = 1
+"-----------------------------------------------------------------------------------------------
+"                  vim-polyglot
+"                  语法高亮插件(比vim自身提供的更丰富)
+"-----------------------------------------------------------------------------------------------
+
+"-----------------------------------------------------------------------------------------------
+"                  vim-cpp-modern
+"                  c/c++语法高亮插件
+"-----------------------------------------------------------------------------------------------
+" " Enable highlighting of C++11 attributes
+" let g:cpp_attributes_highlight = 1
+"
+" " Highlight struct/class member variables (affects both C and C++ files)
+" let g:cpp_member_highlight = 1
+"
+" " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" " (affects both C and C++ files)
+" let g:cpp_simple_highlight = 1
 
 "-----------------------------------------------------------------------------------------------
 "                  ale
 "                  代码语法和语义检查插件 得搭配个语言相关的插件一起配置使用
 "-----------------------------------------------------------------------------------------------
 " TODO
-let g:ale_enabled = 1     " 关闭ale        
-let g:ale_sign_column_always = 1           
-let g:airline#extensions#ale#enabled = 1   
-" 确保 ALE 高亮被激活                      
-let g:ale_set_highlights = 1               
-highlight ALEWarning ctermbg=DarkMagenta   
-" " 设置 ALE 错误消息的高亮颜色为红色      
+let g:ale_enabled = 1     " 关闭ale
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
+" 确保 ALE 高亮被激活
+let g:ale_set_highlights = 1
+highlight ALEWarning ctermbg=DarkMagenta
+" " 设置 ALE 错误消息的高亮颜色为红色
 " highlight ALEError ctermbg=NONE ctermfg=NONE guibg=red guifg=red
-" " 设置 ALE 警告消息的高亮颜色为黄色      
+" " 设置 ALE 警告消息的高亮颜色为黄色
 " highlight ALEWarning ctermbg=NONE ctermfg=NONE guibg=yellow guifg=yellow
-                                           
+
 let g:ale_echo_msg_format = '[%linter%] %code: %%s [%severity%]'
-                                           
-let g:ale_sign_error = '😡'                      " 设置报错提示符
-let g:ale_sign_warning = '😨'                    " 设置警告提示符
-" 禁用空白警告                             
+
+" let g:ale_sign_error = '😡'                      " 设置报错提示符
+" let g:ale_sign_warning = '😨'                    " 设置警告提示符
+" 禁用空白警告
 let g:ale_warn_about_trailing_whitespace = 0
- 
-let g:ale_cpp_cc_options = '-std=c++14 -Wall -Wno-comment'                
-let g:ale_c_cc_options = '-std=c11 -Wall'  
+
+let g:ale_cpp_cc_options = '-std=c++14 -Wall -Wno-comment'
+let g:ale_c_cc_options = '-std=c11 -Wall'
+
 
 " " nmap <silent> <C-u> <Plug>(ale_previous_wrap)
 " " nmap <silent> <C-d> <Plug>(ale_next_wrap)
@@ -192,8 +249,8 @@ let g:ale_c_cc_options = '-std=c11 -Wall'
 " "支持python2语法检测
 " let g:ale_python_flake8_executable = 'python'
 " let g:ale_python_flake8_executable = 'python3'
-" let g:ale_python_flake8_options = '-m flake8 --max-line-length=100 ' .                                                                                                      
-      " \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,E131,E133,E201,E202,E203,E211,E221,E222,E241,E251,E261,E303,E402,W503,E302,E305,E501'         
+" let g:ale_python_flake8_options = '-m flake8 --max-line-length=100 ' .
+"       \ '--max-complexity=10 --ignore=E111,E114,E121,E125,E126,E127,E128,E129,E131,E133,E201,E202,E203,E211,E221,E222,E241,E251,E261,E303,E402,W503,E302,E305,E501'
 " let g:ale_python_flake8_options = '-m flake8 --max-complexity=10 --ignore=E501,E302,E305,F401,F841,E301,E731,E306,E722,E265,C901,E231,W391,E261,E262,E226,E303,E711,E701,E251'
 
 "-----------------------------------------------------------------------------------------------
@@ -205,8 +262,12 @@ let g:ale_c_cc_options = '-std=c11 -Wall'
 "-----------------------------------------------------------------------------------------------
 " TODO 以后再配
 let g:UltiSnipsExpandTrigger="<a-p>"
-let g:codeium_disable_bindings = 0
-imap <script><silent><nowait><expr> <C-s> codeium#Accept()
+
+" let g:codeium_disable_bindings = 1
+" imap <script><silent><nowait><expr> <c-s> codeium#Accept()
+" imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
+" imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+" imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
 "-----------------------------------------------------------------------------------------------
 "                  ycm
@@ -225,7 +286,7 @@ let g:ycm_server_log_level = 'info'
 set completeopt=longest,menu,popup,
 let g:ycm_autoclose_preview_window_after_insertion = 0
 
-let g:ycm_disable_signature_help = 1                "  Disable signature help
+let g:ycm_disable_signature_help = 1                " Disable signature help
 let g:ycm_add_preview_to_completeopt = 1            " 自动弹出函数原型
 let g:ycm_complete_in_comments = 1                  " 在注释输入中也能补全
 let g:ycm_complete_in_strings = 1                   " 在字符串输入中也能补全
@@ -239,10 +300,9 @@ let g:ycm_key_invoke_completion = '<C-t>'           " 设置强制启用语义�
 let g:ycm_filepath_completion_use_working_dir = 0   " 设置YCM的文件名补全时，相对路径是按照vim的当前工作目录还是活动缓冲区中的文件所在目录来解释。0是按照文件所在目录
 let g:ycm_cache_omnifunc=1                          " 某些omni补全引擎引起与YCM缓存不适配，可能不会为给定的前缀产生所有可能的结果，如果关闭该选项则每次都重新查询omni补全引擎生成匹配项 ，默认为1代表开启
 let g:ycm_use_ultisnips_completer = 1               " 启用ultisnips补全，1代表允许
-
-let g:ycm_show_diagnostics_ui = 0                   " 开启YCM的显示诊断信息的功能，0表示关闭 TODO 暂时关闭ycm的语法检查，体验体验ale的
+let g:ycm_show_diagnostics_ui = 1                   " 开启YCM的显示诊断信息的功能，0表示关闭 TODO 暂时关闭ycm的语法检查，体验体验ale的
 let g:ycm_enable_diagnostic_signs = 1               " 在代码中高亮显示YCM诊断对应的内容，如果关闭，则会关闭错误和警告高亮功能，0表示关闭
-let g:ycm_enable_diagnostic_highlighting = 0        " 高亮显示代码中与诊断信息有关的文本或代码，0表示关闭
+let g:ycm_enable_diagnostic_highlighting = 1        " 高亮显示代码中与诊断信息有关的文本或代码，0表示关闭
 let g:ycm_echo_current_diagnostic = 1               " 当光标移到所在行时显示诊断信息
 let g:ycm_always_populate_location_list = 0         " 每次获取新诊断数据时自动填充位置列表，1表示打开，默认关闭以免干扰可能已放置在位置列表中的其他数据
 let g:ycm_key_detailed_diagnostics = '<leader>d'    " 设置查看光标停留处的错误诊断详细信息的快捷键,默认为\d
@@ -283,6 +343,15 @@ let g:ycm_filetype_whitelist = {
             \ "lua":1,
             \}
 
+" LSP
+" let g:ycm_language_server = [
+"     \ {
+"     \   'name': 'clangd',
+"     \   'cmdline': [ 'clangd' ],
+"     \   'filetypes': [ 'c', 'cpp', 'objc', 'objcpp' ]
+"     \ }
+" \ ]
+
 
 " 查找compile_commands.json,并设置ALE
 " 查找路径: ~/.cache/ale/ + 项目路径去除~/
@@ -292,15 +361,15 @@ function! FindCompileCommands()
     " 获取用户主目录的路径
     let l:user_home = expand('~')
     " 替换当前文件路径中的用户主目录部分为缓存目录路径
-    let l:cache_path = substitute(l:current_file_path, l:user_home, l:user_home . '/.cache/ale', '
+    let l:cache_path = substitute(l:current_file_path, l:user_home, l:user_home . '/.cache/ale', '')
     " 构建 compile_commands.json 的最终路径
     let l:final_path = l:cache_path . '/compile_commands.json'
- 
+
     " 检查此路径下是否存在 compile_commands.json
     if filereadable(l:final_path)
         return l:final_path
     endif
- 
+
     " 如果未找到，尝试在父目录中查找
     let l:current_dir = getcwd()
     while isdirectory(l:current_dir)
@@ -316,16 +385,16 @@ function! FindCompileCommands()
         " 向上移动一个目录
         let l:current_dir = fnamemodify(l:current_dir, ':h')
     endwhile
- 
+
     " 所有尝试均未找到文件
     return ''
 endfunction
- 
- 
+
+
 function! SetCompileCommandsForALE()
     " 查找 compile_commands.json 文件
     let l:json_path = FindCompileCommands()
- 
+
     " 如果找到文件，则设置 ALE 选项
     if !empty(l:json_path)
         let b:ale_c_clangd_options = '-p ' . l:json_path
@@ -340,7 +409,7 @@ function! SetCompileCommandsForALE()
         " echohl None
     endif
 endfunction
- 
+
 " 对 C 和 C++ 文件设置自动命令
 autocmd FileType c,cpp call SetCompileCommandsForALE()
-                                                                                                  
+
