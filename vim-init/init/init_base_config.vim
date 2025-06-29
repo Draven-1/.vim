@@ -206,6 +206,9 @@ nnoremap <F2> :set mouse=a<CR>
 nnoremap <F3> :set nopaste<CR>
 " 启用粘贴模式
 nnoremap <F4> :set paste<CR>
+" 关闭Quickfix List
+" nnoremap <F10> :cclose<CR>
+nnoremap <silent> <F10> :cclose<CR>
 " 关闭打开的缓冲区,除了当前缓冲区
 nnoremap <leader>ta :w <bar> %bd <bar> e# <bar> bd# <CR>
 " 查看当前文件的路径
