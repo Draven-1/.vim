@@ -6,7 +6,7 @@
 
 欢迎大家进vim中文交流群学习，里面大佬技术又好说话又好听。https://t.me/vimzh_rea
 
-* TODO 后续用vim-lsp/ALE lsp + clangd + 自动化生成compile_commands.json代替ycm的所有功能，再加上原有的gtags功能不变。做一个更现代化的性能更好的代码跳转查询诊断功能。 
+## TODO 后续用vim-lsp/ALE lsp + clangd + makefile中自动化生成compile_commands.json/cmake 代替ycm的所有功能，再加上原有的gtags功能不变。做一个更现代化的性能更好的代码跳转查询诊断功能。 
 
 TODO 一些还未完成的工作
 * install.sh脚本还不能使用，相关依赖需要参照手动install.sh安装，安装时需要稳定的科学上网。
