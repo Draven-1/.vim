@@ -169,6 +169,10 @@ Plug 'honza/vim-snippets'
 " Plug 'github/copilot.vim'
 " Plug 'Exafunction/codeium.vim', { 'branch': 'main' }
 " Plug 'FittenTech/fittencode.vim'
+
+"-----------------------------------------------------------------------------------------------
+"                  leetcode
+"-----------------------------------------------------------------------------------------------
 Plug 'ianding1/leetcode.vim'
 
 "-----------------------------------------------------------------------------------------------
@@ -198,6 +202,22 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 " sudo npm install --global yarn
 
 Plug 'img-paste-devs/img-paste.vim'
+
+"-----------------------------------------------------------------------------------------------
+"                  vim-lsp
+"                  vim-lsp-settings
+"-----------------------------------------------------------------------------------------------
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
+"-----------------------------------------------------------------------------------------------
+"                  vim-auto-popmenu
+"                  asyncomplete.vim
+"                  自动补全
+"-----------------------------------------------------------------------------------------------
+Plug 'skywind3000/vim-auto-popmenu'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 call plug#end()
 
