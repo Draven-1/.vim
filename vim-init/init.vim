@@ -41,7 +41,7 @@ LoadScript init/init_tools_plugs.vim
 LoadScript init/init_lsp_config.vim
 
 " 加载cpp语法高亮相关的插件配置
-LoadScript init/init_cpp_config.vim
+" LoadScript init/init_cpp_config.vim
 
 " 加载ycm相关配置
 " LoadScript init/init_ycm_config.vim
