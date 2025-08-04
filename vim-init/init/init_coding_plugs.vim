@@ -338,8 +338,9 @@ nnoremap <c-q> <plug>(lsp-references)
 " 自动弹出(默认开启)
 let g:asyncomplete_auto_popup = 1
 " 强制刷新弹出
-imap <c-y> <Plug>(asyncomplete_force_refresh)
+imap <m-y> <Plug>(asyncomplete_force_refresh)
 
+" 设置默认的“completeopt”选项。这些选项包括“menuone”、“noinsert”和“noselect”
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
 
