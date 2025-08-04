@@ -11,7 +11,8 @@ set cscopeprg='gtags-cscope'            "使用 gtags-cscope 代替 cscope
 let $GTAGSLABEL = 'native-pygments'
 " let $GTAGSLABEL='native'
 let g:gutentags_define_advanced_commands = 1
-let $GTAGSCONF = '/usr/local/gtags/share/gtags/gtags.conf'
+" let $GTAGSCONF = '/usr/local/gtags/share/gtags/gtags.conf'
+let $GTAGSCONF = '/etc/gtags/gtags.conf'
 
 " gutentags
 " 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
