@@ -1,41 +1,4 @@
 "-----------------------------------------------------------------------------------------------
-"                  coc
-"                  代码补全
-"-----------------------------------------------------------------------------------------------
-" inoremap <silent><expr> <TAB>
-"       \ coc#pum#visible() ? coc#pum#next(1) :
-"       \ CheckBackspace() ? "\<Tab>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-"
-" " Make <CR> to accept selected completion item or notify coc.nvim to format
-" " <C-g>u breaks current undo, please make your own choice
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-"                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-"
-" function! CheckBackspace() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-"
-" " Use <c-space> to trigger completion
-" if has('nvim')
-"   inoremap <silent><expr> <c-space> coc#refresh()
-" else
-"   inoremap <silent><expr> <c-@> coc#refresh()
-" endif
-"
-" " Use `[g` and `]g` to navigate diagnostics
-" " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
-" nmap <silent> [g <Plug>(coc-diagnostic-prev)
-" nmap <silent> ]g <Plug>(coc-diagnostic-next)
-"
-" nmap <silent> <c-k> <Plug>(coc-definition)
-" nmap <silent> <a-y> <Plug>(coc-type-definition)
-" nmap <silent> <a-i> <Plug>(coc-implementation)
-" nmap <silent> <c-q> <Plug>(coc-references)
-
-"-----------------------------------------------------------------------------------------------
 "                  vim-gutentags
 "                  gutentags_plus
 "                  管理ctags和gtags文件的插件
@@ -158,43 +121,6 @@ noremap <leader>m :Marks<cr>
 " noremap <leader>fn :<C-U><C-R>=printf("Leaderf gtags --next %s", "")<CR><CR>
 
 "-----------------------------------------------------------------------------------------------
-"                  cpp-enhanced-highlight
-"                  C++语法高亮插件(比vim自身提供的更丰富)
-"-----------------------------------------------------------------------------------------------
-" " 启用类范围的高亮
-" let g:cpp_class_scope_highlight = 1
-" " 启用成员变量高亮
-" let g:cpp_member_variable_highlight = 1
-" " 启用类名高亮
-" let g:cpp_class_decl_highlight = 1
-" " 启用POSIX函数高亮
-" let g:cpp_posix_standard = 1
-" " 启用模板高亮(大文件可能有点慢, 有更快的但那个可能不起作用)
-" let g:cpp_experimental_simple_template_highlight = 1
-"
-" " 这将高亮显示关键字 concept 和 requires 以及标准库中所有已命名的需求
-" let g:cpp_concepts_highlight = 1
-
-"-----------------------------------------------------------------------------------------------
-"                  vim-polyglot
-"                  语法高亮插件(比vim自身提供的更丰富)
-"-----------------------------------------------------------------------------------------------
-
-"-----------------------------------------------------------------------------------------------
-"                  vim-cpp-modern
-"                  c/c++语法高亮插件
-"-----------------------------------------------------------------------------------------------
-" " Enable highlighting of C++11 attributes
-" let g:cpp_attributes_highlight = 1
-"
-" " Highlight struct/class member variables (affects both C and C++ files)
-" let g:cpp_member_highlight = 1
-"
-" " Put all standard C and C++ keywords under Vim's highlight group 'Statement'
-" " (affects both C and C++ files)
-" let g:cpp_simple_highlight = 1
-
-"-----------------------------------------------------------------------------------------------
 "                  ale
 "                  代码语法和语义检查插件 得搭配个语言相关的插件一起配置使用
 "-----------------------------------------------------------------------------------------------
@@ -271,81 +197,107 @@ let g:UltiSnipsExpandTrigger="<a-p>"
 " imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
 "-----------------------------------------------------------------------------------------------
-"                  vim-lsp
-"                  vim-lsp-settings
+"                  vim-devicons                                                      
 "-----------------------------------------------------------------------------------------------
-" 自定义服务器安装目录
-let g:lsp_settings_servers_dir = expand('$HOME/.vim/lsp-servers')
-" 设置lsp解析项目根目录标记
-let g:lsp_settings_root_markers = ['.root', '.git', '.git/', '.svn']
-" 关闭代码诊断
-let g:lsp_diagnostics_enabled = 1
-
-let g:lsp_diagnostics_signs_error = {'text': '❌'}
-let g:lsp_diagnostics_signs_warning = {'text': '❗'}
-
-" 设置compile_commands.json文件路径
-" 设置clangd的默认参数
-" 后台索引整个工程，极大加速跳转与补全
-" 启用 clang-tidy 代码静态检查
-" 每个语义上不同的补全项分别列出，包含完整的类型信息
-" 不要自动插入头文件
-" 控制代码补全时函数调用括号内是否包含参数占位符 --function-arg-placeholders=disable 可以关闭
-" 若设为true，代码补全将包含那些不在当前作用域（例如命名空间）中定义的索引符号
-let g:lsp_settings = {
-\  'clangd': {
-\    'args': [
-\      '--background-index',
-\      '--clang-tidy',
-\      '--completion-style=detailed',
-\      '--header-insertion=never',
-\      '--function-arg-placeholders',
-\      '--all-scopes-completion'
-\    ],
-\  },
-\}
-
-let g:lsp_document_code_action_signs_enabled = 0
-" 重命名
-nnoremap <leader>rn <plug>(lsp-rename)
-" 跳转定义
-nnoremap <c-k> <plug>(lsp-definition)
-" 跳转引用
-nnoremap <c-q> <plug>(lsp-references)
+" 开箱即用
 
 "-----------------------------------------------------------------------------------------------
-"                  vim-auto-popmenu
-"                  asyncomplete.vim
-"                  自动补全
+"                  nerdtree
+"                  目录结构
 "-----------------------------------------------------------------------------------------------
-"--------------------------vim-auto-popmenu-----------------------------------------------------
-" 禁用插件
-" let g:apc_enable = 0
+" 切换
+nnoremap <a-n> :NERDTreeToggle<CR>
+" 打开nerdtree 并指向当前文件
+" nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <a-m> :NERDTreeFind<CR>
 
-" 不区分文件类型，全部都弹补全
-" let g:apc_enable_ft = {'*': 1}
+" " 如果指定了文件，则将光标移至其窗口。
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" " 当 Vim 以目录参数启动时
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+"     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | wincmd p | endif
+" " 当 Vim 启动时没有参数
+" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"
+" " 如果 NERDTree 是唯一标签页
+"  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" " 如果 NERDTree 是最后一个窗口
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+"
+" " 如果另一个缓冲区试图取代 NERDTree，则将其放入另一个窗口，然后再返回 NERDTree。
+" autocmd BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+"     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+"
+" " 在每个新标签页上打开现有的 NERDTree
+" autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 
-" source for dictionary, current or other loaded buffers, see ':help cpt'
-" set cpt=.,k,w,b
+"-----------------------------------------------------------------------------------------------
+"                  nerdcommenter
+"                  代码注释
+"-----------------------------------------------------------------------------------------------
+let g:NERDCreateDefaultMappings = 1             " 创建默认的映射 
+let g:NERDSpaceDelims = 1                       " 默认情况下在注释分隔符后添加空格
+let g:NERDCompactSexyComs = 1                   " 使用紧凑的语法来修饰多行注释
+let g:NERDDefaultAlign = 'left'                 " 按行对齐的注释分隔符左对齐，而不是按照代码缩进对齐
+let g:NERDCommentEmptyLines = 1                 " 允许注释和反转空行(在注释区域时很有用)
+let g:NERDTrimTrailingWhitespace = 1            " 当取消注释时，允许删除尾随空格
+let g:NERDToggleCheckAllLines = 1               " 启用NERDCommenterToggle来检查所有选中的行是否被注释
+let g:NERDAltDelims_c = 1                       " C语言默认用 // 注释
 
-" don't select the first item.
-" set completeopt=menu,menuone,noselect
+"-----------------------------------------------------------------------------------------------
+"                  interestingwords
+"                  高亮单词
+"-----------------------------------------------------------------------------------------------
+" let g:interestingWordsGUIColors = ['#8CCBEA', '#A4E57E', '#FFDB72', '#FF7272', '#FFB3FF', '#9999FF']
+" let g:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']
+" 随机调整颜色
+let g:interestingWordsRandomiseColors = 1
 
-" suppress annoy messages.
-" set shortmess+=c
 
-"--------------------------asyncomplete.vim-----------------------------------------------------
-" 自动弹出(默认开启)
-let g:asyncomplete_auto_popup = 1
-" 强制刷新弹出
-imap <m-y> <Plug>(asyncomplete_force_refresh)
+"-----------------------------------------------------------------------------------------------
+"                  fugitive
+"                  在vim命令行执行git命令(其实我只用Git blame)
+"-----------------------------------------------------------------------------------------------
+" 开箱即用
 
-" 设置默认的“completeopt”选项。这些选项包括“menuone”、“noinsert”和“noselect”
-let g:asyncomplete_auto_completeopt = 0
-set completeopt=menuone,noinsert,noselect,preview
+"-----------------------------------------------------------------------------------------------
+"                  vim-surround
+"                  快速添加、删除、修改括号引号
+"-----------------------------------------------------------------------------------------------
+" 简单操作用着还行
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"-----------------------------------------------------------------------------------------------
+"                  vim-fixkey
+"                  让alt键在vim中生效
+"-----------------------------------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------------------------------
+"                  括号成对
+"-----------------------------------------------------------------------------------------------
+" 默认在注释和字符串中中不会自动成对
+" 在注释和字符串中也开启
+let g:delimitMate_excluded_regions = ""
+
+" 打开回车时智能换行和缩进
+let g:delimitMate_expand_cr = 2
+
+"-----------------------------------------------------------------------------------------------
+"                  echodoc.vim
+"                  vim命令行显示函数原型
+"-----------------------------------------------------------------------------------------------
+let g:echodoc_enable_at_startup = 1
+
+"-----------------------------------------------------------------------------------------------
+"                  indentLine 
+"                  制表符      
+"-----------------------------------------------------------------------------------------------
+" 下面三个选一个 或者 3个都不选                                                                 
+" let g:indentLine_setColors = 0
+" let g:indentLine_defaultGroup = 'SpecialKey'
+" let g:indentLine_color_term = 239
+" let g:indentLine_char_list = ['|', '¦', '┆ ', '┊ ']
 
 
 

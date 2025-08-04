@@ -32,13 +32,22 @@ LoadScript init/init_install_plugs.vim
 " 加载让vim更漂亮的插件的配置
 LoadScript init/init_display_plugs.vim
 " 配置主题时有些配置项不生效, 需要执行一下source
-source ~/.vim/vim-init/init/init_display_plugs.vim
+" source ~/.vim/vim-init/init/init_display_plugs.vim
 
 " 加载方便coding的插件配置
-LoadScript init/init_coding_plugs.vim
+LoadScript init/init_tools_plugs.vim
+
+" 加载lsp相关的插件配置
+LoadScript init/init_lsp_config.vim
+
+" 加载cpp语法高亮相关的插件配置
+LoadScript init/init_cpp_config.vim
 
 " 加载ycm相关配置
 " LoadScript init/init_ycm_config.vim
+
+" 加载coc相关配置
+" LoadScript init/init_coc_config.vim
 
 " 加载markdown编写和预览的插件配置
 " LoadScript init/init_markdown_plugs.vim
