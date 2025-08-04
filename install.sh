@@ -72,6 +72,8 @@ dnf install hyperfine           # 压测工具
 # 源码编译安装gtags
 # 依赖 automake, autoconf, gperf, bison and flex
 sudo dnf install automake autoconf gperf bison flex
+# 工具安装gtags
+sudo apt install global 安装完需要在vim配置设置gtags.conf路径 let $GTAGSCONF = '/etc/gtags/gtags.conf'
 # 安装pygments
 sudo dnf install pip     |  sudo apt install universal-ctags
 pip install pygments
