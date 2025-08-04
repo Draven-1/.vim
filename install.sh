@@ -48,6 +48,7 @@ source ~/.zshrc
 
 安装clangd服务，lsp用，clang-analyzer中包含了工具intercept-build，和bear功能一样用于生成compile_commands.json文件
 # dnf  install clangd llvm clang-analyzer
+# LspInstallServer 可以在用vim打开文件后执行LspInstallServer安装相对应的lsp服务器
 
 # 安装一些好用又好看的命令 TODO
 sudo dnf install bat            # cat 
