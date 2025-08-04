@@ -10,6 +10,13 @@ sudo dnf install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # alt+w r 重新加载tmux的配置文件
 # alt+w I 安装tmux的插件
+# 编译安装tmux
+# dnf install ncurses-devel autoconf automake pkgconfig
+# sh autogen.sh                                        
+# dnf install libevent                                 
+# dnf install libevent-devl                            
+# dnf install libevent-devel ncurses-devel             
+# ./configure --prefix=/usr/local/tmux3.5              
 
 # 安装fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -32,6 +39,15 @@ source ~/.zshrc
 
 # 安装nvim 暂时不用，以后有兴趣再用
 # sudo dnf install neovim python3-neovim
+
+# 安装bear
+# dnf install -y dnf-plugins-core     
+# config-manager --set-enabled crb    
+# dnf config-manager --set-enabled crb
+# dnf install -y bear                 
+
+安装clangd服务，lsp用，clang-analyzer中包含了工具intercept-build，和bear功能一样用于生成compile_commands.json文件
+# dnf  install clangd llvm clang-analyzer
 
 # 安装一些好用又好看的命令 TODO
 sudo dnf install bat            # cat 
