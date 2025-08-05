@@ -58,6 +58,10 @@ fc-cache -fv
 
 ./uninstall.sh # 卸载
 
+# 安装yazi
+apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick
+sudo snap install yazi --classic --edge
+
 # 安装一些好用又好看的命令 TODO
 sudo dnf install bat            # cat 
 sudo dnf install ag             # grep 
