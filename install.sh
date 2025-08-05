@@ -50,6 +50,14 @@ source ~/.zshrc
 # dnf  install clangd llvm clang-analyzer
 # LspInstallServer 可以在用vim打开文件后执行LspInstallServer安装相对应的lsp服务器
 
+# 安装nerd所有字体
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+fc-cache -fv
+
+./uninstall.sh # 卸载
+
 # 安装一些好用又好看的命令 TODO
 sudo dnf install bat            # cat 
 sudo dnf install ag             # grep 
