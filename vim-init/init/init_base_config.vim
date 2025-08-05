@@ -103,9 +103,6 @@ set cursorline
 " 高亮当前列
 set cursorcolumn
 
-" 关闭虚拟编辑区
-set virtualedit=
-
 " 在注释行上下插入行不会自动插入注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 

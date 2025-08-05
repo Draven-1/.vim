@@ -51,3 +51,7 @@ LoadScript init/init_lsp_config.vim
 
 " 加载markdown编写和预览的插件配置
 " LoadScript init/init_markdown_config.vim
+
+" 前面有配置修改了它
+" 关闭虚拟编辑区
+set virtualedit=
