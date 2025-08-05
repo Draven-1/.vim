@@ -188,14 +188,8 @@ let g:ale_c_cc_options = '-std=c17 -Wall'
 "                  codeium.vim
 "                  代码片段
 "-----------------------------------------------------------------------------------------------
-" TODO 以后再配
-let g:UltiSnipsExpandTrigger="<a-p>"
+let g:UltiSnipsExpandTrigger="<c-j>"
 
-" let g:codeium_disable_bindings = 1
-" imap <script><silent><nowait><expr> <c-s> codeium#Accept()
-" imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
-" imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
-" imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
 "-----------------------------------------------------------------------------------------------
 "                  vim-devicons                                                      
@@ -259,6 +253,12 @@ let g:interestingWordsRandomiseColors = 1
 "-----------------------------------------------------------------------------------------------
 "                  fugitive
 "                  在vim命令行执行git命令(其实我只用Git blame)
+"-----------------------------------------------------------------------------------------------
+" 开箱即用
+
+"-----------------------------------------------------------------------------------------------
+"                  vim-signify
+"                  侧边栏显示修改信息
 "-----------------------------------------------------------------------------------------------
 " 开箱即用
 

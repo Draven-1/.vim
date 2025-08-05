@@ -7,10 +7,10 @@ let g:lsp_settings_servers_dir = expand('$HOME/.vim/lsp-servers')
 " 设置lsp解析项目根目录标记
 let g:lsp_settings_root_markers = ['.root', '.git', '.git/', '.svn']
 " 关闭代码诊断
-let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_enabled = 0
 
-let g:lsp_diagnostics_signs_error = {'text': '❌'}
-let g:lsp_diagnostics_signs_warning = {'text': '❗'}
+" let g:lsp_diagnostics_signs_error = {'text': '❌'}
+" let g:lsp_diagnostics_signs_warning = {'text': '❗'}
 
 " 设置compile_commands.json文件路径
 " 设置clangd的默认参数
@@ -52,19 +52,19 @@ nnoremap <c-q> <plug>(lsp-references)
 
 " 不区分文件类型，全部都弹补全
 " let g:apc_enable_ft = {'*': 1}
-
-" source for dictionary, current or other loaded buffers, see ':help cpt'
+"
+" " source for dictionary, current or other loaded buffers, see ':help cpt'
 " set cpt=.,k,w,b
-
-" don't select the first item.
+"
+" " don't select the first item.
 " set completeopt=menu,menuone,noselect
-
-" suppress annoy messages.
+"
+" " suppress annoy messages.
 " set shortmess+=c
 
 "--------------------------asyncomplete.vim-----------------------------------------------------
 " 自动弹出(默认开启)
-let g:asyncomplete_auto_popup = 1
+" let g:asyncomplete_auto_popup = 1
 " 强制刷新弹出
 imap <m-y> <Plug>(asyncomplete_force_refresh)
 
