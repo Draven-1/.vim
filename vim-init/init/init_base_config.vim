@@ -20,7 +20,7 @@ set noerrorbells
 set laststatus=2
 
 " 每行左侧的行号列预留空间来显示这些标记、错误、警告和其他行级信息
-set signcolumn=yes
+set signcolumn=yes:2
 
 " 禁用状态栏中显示当前的编辑模式
 set noshowmode
