@@ -225,5 +225,11 @@ Plug 'skywind3000/vim-auto-popmenu'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
+"-----------------------------------------------------------------------------------------------
+"                  vim-kitty
+"                  kitty配置文件的语法高亮
+"-----------------------------------------------------------------------------------------------
+Plug 'fladson/vim-kitty', { 'tag': '*' }
+
 call plug#end()
 
