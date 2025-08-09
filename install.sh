@@ -72,6 +72,27 @@ sudo dnf copr enable atim/bottom -y
 sudo dnf install bottom         # top
 dnf install hyperfine           # 压测工具
 
+# 编译安装open-vm-tool
+sudo apt install -y libfuse3-dev  # 挂载共享目录的依赖
+# 执行下面大段命令
+sudo tee /etc/systemd/system/mnt-hgfs.mount >/dev/null <<'EOF'
+[Unit]
+Description=Mount VMware shared folders (HGFS)
+After=open-vm-tools.service
+Requires=open-vm-tools.service
+
+[Mount]
+What=.host:/
+Where=/mnt/hgfs
+Type=fuse.vmhgfs-fuse
+Options=allow_other,auto_unmount
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable --now mnt-hgfs.mount
+
 
 
 #----------------------------------------------------------------------------------------------------
