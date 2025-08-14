@@ -308,7 +308,7 @@ let g:echodoc_enable_at_startup = 1
 " 访问外网需要代理
 " export OPENAI_PROXY="http://localhost:1087"
 " 设置API_KEY
-let g:openai_api_key='sk-proj-u_Nq0FNzA0b5YnWIFyOQ7UsxB6DCJWSdeAildlMzStrorjrXKflstHgV-2FfiFx3Bpl
+let g:openai_api_key=''
 
 let g:chat_gpt_max_tokens=16384
 let g:chat_gpt_model='gpt-4o'
