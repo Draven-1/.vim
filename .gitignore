@@ -1,1 +1,4 @@
 plugged/YouCompleteMe/
+plugged/
+autoload/
+lsp-servers/
