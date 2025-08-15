@@ -39,9 +39,9 @@ let g:vim_ai_chat = {
 "                  vim和claude的交互插件
 "-----------------------------------------------------------------------------------------------
 " TODO 需要配置
-let g:claude_map_implement = "<Leader>si"
-let g:claude_map_open_chat = "<Leadecu>sc"
+let g:claude_map_implement = "<Leader>mi"
+let g:claude_map_open_chat = "<Leadecu>mc"
 let g:claude_map_send_chat_message = "<C-]>"
-let g:claude_map_cancel_response = "<Leader>sx"
+let g:claude_map_cancel_response = "<Leader>mx"
 
 
