@@ -1,0 +1,198 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "keybindings": 
+    [
+        {
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "id": "User.paste",
+            "keys": "ctrl+shift+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "bellStyle": "none"
+        },
+        "list": 
+        [
+            {
+                "colorScheme": "Campbell Powershell",
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font Propo",
+                    "size": 11
+                },
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "bellStyle": "none",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell Powershell",
+                "commandline": "ssh root@182.92.116.116 -p 4396",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font",
+                    "size": 11
+                },
+                "guid": "{9f95d7f5-2dd9-4b1b-bdc5-5bcd7dcb2669}",
+                "hidden": false,
+                "historySize": 10661,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "182.92.116.116",
+                "padding": "8, 8, 8, 8",
+                "scrollbarState": "hidden",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "suppressApplicationTitle": true,
+                "tabTitle": "182.92.116.116",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell Powershell",
+                "commandline": "ssh lc@192.168.15.128",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "DejaVuSansM Nerd Font",
+                    "size": 11
+                },
+                "guid": "{a78bd83f-942e-4375-b001-12c450057c3c}",
+                "hidden": false,
+                "historySize": 9521,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "192.168.15.128",
+                "padding": "8, 8, 8, 8",
+                "scrollbarState": "hidden",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "suppressApplicationTitle": true,
+                "tabTitle": "192.168.15.128",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell Powershell",
+                "commandline": "D:\\msys64\\usr\\bin\\zsh.exe --login -i",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font",
+                    "size": 11
+                },
+                "guid": "{3536accf-07f3-4271-a7ca-2f29f4bb5880}",
+                "hidden": false,
+                "historySize": 9521,
+                "icon": "D:\\msys64\\msys2.ico",
+                "name": "MSYS2",
+                "padding": "8, 8, 8, 8",
+                "scrollbarState": "hidden",
+                "snapOnInput": true,
+                "startingDirectory": "D:\\msys64\\home\\L C",
+                "suppressApplicationTitle": true,
+                "tabTitle": "MSYS2",
+                "useAcrylic": false
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "closeOnExit": "automatic",
+                "colorScheme": "Campbell Powershell",
+                "commandline": "ssh lc@192.168.15.131",
+                "cursorShape": "filledBox",
+                "font": 
+                {
+                    "face": "JetBrainsMono Nerd Font Propo",
+                    "size": 11
+                },
+                "guid": "{b36a873a-b4cd-4732-9409-4bdce71e98db}",
+                "hidden": false,
+                "historySize": 9521,
+                "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
+                "name": "192.168.15.131",
+                "padding": "8, 8, 8, 8",
+                "scrollbarState": "hidden",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "suppressApplicationTitle": true,
+                "tabTitle": "192.168.15.131",
+                "useAcrylic": false
+            }
+        ]
+    },
+    "schemes": [],
+    "themes": []
+}
