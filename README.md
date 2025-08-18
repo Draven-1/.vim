@@ -7,7 +7,7 @@
 欢迎大家进vim中文交流群学习，里面大佬技术又好说话又好听。https://t.me/vimzh_rea
 
 ## TODO
-后续用vim-lsp/ALE lsp + clangd + makefile中自动化生成compile_commands.json/cmake 代替ycm的所有功能，再加上原有的gtags功能不变。做一个更现代化的性能更好的代码跳转查询诊断功能。
+～～后续用vim-lsp/ALE lsp + clangd + makefile中自动化生成compile_commands.json/cmake 代替ycm的所有功能，再加上原有的gtags功能不变。做一个更现代化的性能更好的代码跳转查询诊断功能。～～
 sudo apt/dnf install clangd llvm bear
 
 
@@ -40,10 +40,10 @@ TODO 一些还未完成的工作
 * zsh
 * fzf
 * ag 和 rg 代替grep的命令
-* bat 代替cat的命令
+* ～～bat 代替cat的命令～～
 
 ## windows terminal相关配置 
-TODO
+settings.json为WindwosTerminal的配置
 
 
 
