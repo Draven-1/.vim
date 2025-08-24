@@ -12,7 +12,8 @@ let $GTAGSLABEL = 'native-pygments'
 " let $GTAGSLABEL='native'
 let g:gutentags_define_advanced_commands = 1
 " let $GTAGSCONF = '/usr/local/gtags/share/gtags/gtags.conf'
-let $GTAGSCONF = '/etc/gtags/gtags.conf'
+" let $GTAGSCONF = '/etc/gtags/gtags.conf'
+let $GTAGSCONF = '/opt/homebrew/etc/gtags.conf'
 
 " gutentags
 " 搜索工程目录的标志，当前文件路径向上递归直到碰到这些文件/目录名
@@ -139,7 +140,8 @@ highlight ALEWarning ctermbg=DarkMagenta
 
 let g:ale_echo_msg_format = '[%linter%] %code: %%s [%severity%]'
 " 设置报错提示符
-let g:ale_sign_error = '😡'
+" let g:ale_sign_error = '😡'
+let g:ale_sign_error = '👿'
 " 设置警告提示符
 let g:ale_sign_warning = '😨'
 " 禁用空白警告
