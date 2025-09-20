@@ -301,8 +301,10 @@ let g:echodoc_enable_at_startup = 1
 " let g:indentLine_char_list = ['|', '¦', '┆ ', '┊ ']
 
 
+"-----------------------------------------------------------------------------------------------
 " 查找compile_commands.json,并设置ALE
 " 查找路径: ~/.cache/ale/ + 项目路径去除~/
+"-----------------------------------------------------------------------------------------------
 function! FindCompileCommands()
     " 获取当前文件的完整路径
     let l:current_file_path = expand('%:p')
