@@ -169,7 +169,6 @@ let g:bufferline_echo = 0
 syntax enable
 syntax on
 " 设置终端颜色支持为256色
-set t_Co=256
 " 启用 True Color 支持
 set termguicolors
 " 设置终端类型为 xterm-256color
@@ -180,12 +179,13 @@ set termguicolors
 let g:oceanic_next_terminal_bold = 1        
 " 斜体
 let g:oceanic_next_terminal_italic = 1      
+set background=dark
 colorscheme OceanicNext                     
 " 终端透明
-hi Normal guibg=NONE ctermbg=NONE
-hi LineNr guibg=NONE ctermbg=NONE
-hi SignColumn guibg=NONE ctermbg=NONE
-hi EndOfBuffer guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
+" hi LineNr guibg=NONE ctermbg=NONE
+" hi SignColumn guibg=NONE ctermbg=NONE
+" hi EndOfBuffer guibg=NONE ctermbg=NONE
 " 搭配airline themes的oceanicnext
 let g:airline_theme='oceanicnext'
 
