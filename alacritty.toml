@@ -1,0 +1,13 @@
+[general]
+# import = [ "~/.config/alacritty/themes/themes/oceanic_next.toml" ]
+import = [ "~/.config/alacritty/themes/themes/solarized_dark_higher_contrast.toml" ]
+
+[window]
+option_as_alt = "Both"
+
+[font]
+size = 13
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"

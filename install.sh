@@ -174,3 +174,9 @@ File /home/lc/.vim/plugged/YouCompleteMe/third_party/ycmd/build.py does not exis
 '''
 
 # 由于YCM比较大，就不把他放到git上了
+
+# 终端 alacritty
+# We use Alacritty's default Linux config directory as our storage location here.
+mkdir -p ~/.config/alacritty/themes
+~/.config/alacritty/alacritty.toml
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes

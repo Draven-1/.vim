@@ -1,0 +1,33 @@
+# Solarized Dark Higher Contrast — from kitty -> Alacritty
+
+[colors.primary]
+background = "#001e26"
+foreground = "#9bc1c2"
+
+[colors.normal]
+black   = "#002731" # color0
+red     = "#d01b24" # color1
+green   = "#6bbe6c" # color2
+yellow  = "#a57705" # color3
+blue    = "#2075c7" # color4
+magenta = "#c61b6e" # color5
+cyan    = "#259185" # color6
+white   = "#e9e2cb" # color7
+
+[colors.bright]
+black   = "#006388" # color8
+red     = "#f4153b" # color9
+green   = "#50ee84" # color10
+yellow  = "#b17e28" # color11
+blue    = "#178dc7" # color12
+magenta = "#e14d8e" # color13
+cyan    = "#00b29e" # color14
+white   = "#fcf4dc" # color15
+
+[colors.cursor]
+cursor = "#f34a00"          # kitty: cursor
+
+[colors.selection]
+background = "#003747"      # kitty: selection_background
+text       = "#001e26"      # kitty: selection_foreground
+

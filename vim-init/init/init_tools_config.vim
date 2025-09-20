@@ -130,7 +130,7 @@ let g:ale_enabled = 1     " 关闭ale
 let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
 " 确保 ALE 高亮被激活
-let g:ale_set_highlights = 1
+let g:ale_set_highlights = 0
 highlight ALEWarning ctermbg=DarkMagenta
 " 设置 ALE 错误消息的高亮颜色为红色
 " highlight ALEError ctermbg=NONE ctermfg=NONE guibg=red guifg=red
@@ -141,7 +141,7 @@ let g:ale_echo_msg_format = '[%linter%] %code: %%s [%severity%]'
 " 设置报错提示符
 let g:ale_sign_error = '😡'
 " 设置警告提示符
-let g:ale_sign_warning = '😨'
+let g:ale_sign_warning = '🥶'
 " 禁用空白警告
 let g:ale_warn_about_trailing_whitespace = 0
 
