@@ -201,32 +201,32 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 "                  nerdtree
 "                  目录结构
 "-----------------------------------------------------------------------------------------------
-" 切换
-nnoremap <a-n> :NERDTreeToggle<CR>
-" 打开nerdtree 并指向当前文件
-" nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <a-m> :NERDTreeFind<CR>
-
-" " 如果指定了文件，则将光标移至其窗口。
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-" " 当 Vim 以目录参数启动时
-" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
-"     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | wincmd p | endif
-" " 当 Vim 启动时没有参数
-" autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" " 切换
+" nnoremap <a-n> :NERDTreeToggle<CR>
+" " 打开nerdtree 并指向当前文件
+" " nnoremap <leader>f :NERDTreeFind<CR>
+" nnoremap <a-m> :NERDTreeFind<CR>
 "
-" " 如果 NERDTree 是唯一标签页
-"  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-" " 如果 NERDTree 是最后一个窗口
-autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-"
-" " 如果另一个缓冲区试图取代 NERDTree，则将其放入另一个窗口，然后再返回 NERDTree。
-" autocmd BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-"     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-"
-" " 在每个新标签页上打开现有的 NERDTree
-" autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
+" " " 如果指定了文件，则将光标移至其窗口。
+" " autocmd StdinReadPre * let s:std_in=1
+" " autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" " " 当 Vim 以目录参数启动时
+" " autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+" "     \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | wincmd p | endif
+" " " 当 Vim 启动时没有参数
+" " autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+" "
+" " " 如果 NERDTree 是唯一标签页
+" "  autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" " " 如果 NERDTree 是最后一个窗口
+" autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" "
+" " " 如果另一个缓冲区试图取代 NERDTree，则将其放入另一个窗口，然后再返回 NERDTree。
+" " autocmd BufEnter * if winnr() == winnr('h') && bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+" "     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+" "
+" " " 在每个新标签页上打开现有的 NERDTree
+" " autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 "-----------------------------------------------------------------------------------------------
 "                  nerdcommenter
@@ -363,4 +363,43 @@ endfunction
 
 " 对 C 和 C++ 文件设置自动命令
 autocmd FileType c,cpp call SetCompileCommandsForALE()
+
+" —— netrw 外观与行为 ——
+" 保留帮助横幅（不隐藏）
+let g:netrw_banner = 1
+" 以树形结构显示
+let g:netrw_liststyle = 3
+" 在“前一个窗口”中打开文件（这样左侧是目录，回车后在右侧打开）
+let g:netrw_browse_split = 4
+" 垂直分屏时让目录窗口出现在左侧（配合上面的设置更稳定）
+let g:netrw_altv = 1
+
+" 不要自动把窗口宽度均分
+set noequalalways
+
+" 任何 netrw 窗口都固定宽度，避免被后续操作改动
+autocmd FileType netrw setlocal winfixwidth
+
+" 启动时（无参数）左侧打开 netrw，宽度 150 列，右侧保持默认空缓冲
+augroup StartWithNetrw
+  autocmd!
+  autocmd VimEnter * if argc() == 0 |
+        \   execute 'silent 15Lexplore' | " 直接用 count 指定 150 列
+        \   endif
+        " \   wincmd l                    | " 光标回到右侧
+augroup END
+
+" Netrw 里也显示行号
+augroup NetrwNumber
+  autocmd!
+  autocmd FileType netrw setlocal number          " 绝对行号
+  " 如果你更喜欢相对行号，把上一行注释掉，改用下面这一行：
+  " autocmd FileType netrw setlocal number relativenumber
+
+  " 可选：避免占宽，把标记列关掉，并缩小行号列宽
+  " autocmd FileType netrw setlocal signcolumn=no
+  " autocmd FileType netrw setlocal numberwidth=3
+augroup END
+
+nnoremap <silent> <F8> :15Lexplore<CR>
 
