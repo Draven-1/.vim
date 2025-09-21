@@ -70,7 +70,7 @@ let g:airline_left_alt_sep = '👀'
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = '🌞'
 " let g:airline_symbols.branch = ''
-let g:airline_symbols.branch = ' 🦥'
+let g:airline_symbols.branch = ' 🇨🇳'
 " let g:airline_symbols.colnr = ' ℅:'
 " let g:airline_symbols.colnr = ' ㏇:'
 let g:airline_symbols.colnr = ' 🆑:'
@@ -216,4 +216,18 @@ let g:airline_theme='oceanicnext'
 " colorscheme solarized8_high
 " colorscheme solarized8_low
 " colorscheme solarized8_flat
+
+"-----------------------------------------------------------------------------------------------
+"                  lambdalisue/fern.vim 目录结构，代替nerdtree
+"                  vim自带的netrw不支持文件图标
+"                  lambdalisue/fern-renderer-devicons.vim 时和一起使用显示文件图标
+"                  下面两个配合显示文件图标
+"                  vim-fern-renderer-nerdfont
+"                  lambdalisue/vim-nerdfont
+"-----------------------------------------------------------------------------------------------
+" 下面两个选其中一个就可以
+let g:fern#renderer = "devicons"   "个人感觉devicons的图标下面的好看点
+" let g:fern#renderer = "nerdfont"
+
+nnoremap <silent> <F7> :Fern . -drawer -toggle -reveal=%<CR>
 
