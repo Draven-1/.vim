@@ -7,14 +7,8 @@
 欢迎大家进vim中文交流群学习，里面大佬技术又好说话又好听。https://t.me/vimzh_rea
 
 ## TODO
-~~后续用vim-lsp/ALE lsp + clangd + makefile中自动化生成compile_commands.json/cmake 代替ycm的所有功能，再加上原有的gtags功能不变。做一个更现代化的性能更好的代码跳转查询诊断功能。~~
-~~sudo apt/dnf install clangd llvm bear~~
-
-
 一些还未完成的工作
 * install.sh脚本还不能使用，相关依赖需要参照手动install.sh安装，安装时需要稳定的科学上网。
-* ~~ale代码语法语义检查目前只支持c/c++，其他语言还未配置~~。
-* ~~用coc代替YCM体验使用(不喜欢coc)。~~
 ## vim
 * vim相关的配置
 
@@ -40,10 +34,15 @@
 * zsh
 * fzf
 * ag 和 rg 代替grep的命令
-* ~~bat 代替cat的命令~~
 
 ## windows terminal相关配置 
 settings.json为WindwosTerminal的配置
+
+## kitty 终端相关配置
+kitty.conf
+
+## alacritty 终端配置
+alacritty.toml
 
 
 
