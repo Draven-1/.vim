@@ -248,7 +248,14 @@ let g:NERDAltDelims_c = 1                       " C语言默认用 // 注释
 " let g:interestingWordsGUIColors = ['#8CCBEA', '#A4E57E', '#FFDB72', '#FF7272', '#FFB3FF', '#9999FF']
 " let g:interestingWordsTermColors = ['154', '121', '211', '137', '214', '222']
 " 随机调整颜色
-let g:interestingWordsRandomiseColors = 1
+" let g:interestingWordsRandomiseColors = 1
+" 关闭随机颜色                                                                                                 
+let g:interestingWordsRandomiseColors = 0                                                                      
+                                                                                                               
+" GUI/真彩（termguicolors 开启）用十六进制颜色                                                                 
+let g:interestingWordsGUIColors = ['#FF5C8A', '#2ECC71', '#8E44AD', '#E74C3C', '#ADD8E6', '#B87333', '#E67E22']
+" 纯终端（256 色）用 cterm 颜色编号（近似，不含蓝/黄）                                                         
+let g:interestingWordsTermColors = ['197', '46', '129', '160', '153', '130', '202']                            
 
 
 "-----------------------------------------------------------------------------------------------
