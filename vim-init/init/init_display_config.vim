@@ -68,7 +68,7 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = '👀'
 " " let g:airline_right_sep = '😋😋'
 let g:airline_right_sep = ''
-let g:airline_right_alt_sep = '🌞'
+" let g:airline_right_alt_sep = '🌞'
 " let g:airline_symbols.branch = ''
 let g:airline_symbols.branch = ' 🇨🇳'
 " let g:airline_symbols.colnr = ' ℅:'
@@ -226,8 +226,8 @@ let g:airline_theme='oceanicnext'
 "                  lambdalisue/vim-nerdfont
 "-----------------------------------------------------------------------------------------------
 " 下面两个选其中一个就可以
-let g:fern#renderer = "devicons"   "个人感觉devicons的图标下面的好看点
-" let g:fern#renderer = "nerdfont"
+" let g:fern#renderer = "devicons"   "个人感觉devicons的图标下面的好看点
+let g:fern#renderer = "nerdfont"
 
 nnoremap <silent> <F7> :Fern . -drawer -toggle -reveal=%<CR>
 

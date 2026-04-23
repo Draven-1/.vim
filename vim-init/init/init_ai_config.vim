@@ -22,16 +22,16 @@ let g:split_ratio=3
 "-----------------------------------------------------------------------------------------------
 " TODO 需要更多的配置才能更好的使用
 " 需要将API KEY放到下面的目录
-let g:vim_ai_token_file_path = '~/.config/openai.token'
-let g:vim_ai_chat = {
-\  "options": {
-\    "model": "gpt-4o",
-\    "stream": 0,
-\    "temperature": 1,
-\    "max_completion_tokens": 16384,
-\    "initial_prompt": "",
-\  },
-\}
+" let g:vim_ai_token_file_path = '~/.config/openai.token'
+" let g:vim_ai_chat = {
+" \  "options": {
+" \    "model": "gpt-4o",
+" \    "stream": 0,
+" \    "temperature": 1,
+" \    "max_completion_tokens": 16384,
+" \    "initial_prompt": "",
+" \  },
+" \}
 
 
 "-----------------------------------------------------------------------------------------------

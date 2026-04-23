@@ -23,6 +23,7 @@ set rtp+=~/.vim
 "======================================================================
 
 " 加载基础配置
+" let g:Lf_MruEnable = 0
 LoadScript init/init_base_config.vim
 source ~/.vim/vim-init/init/init_base_config.vim
 

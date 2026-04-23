@@ -61,7 +61,6 @@ Plug 'ryanoasis/vim-devicons'
 "                  vim自带的netrw不支持文件图标
 "-----------------------------------------------------------------------------------------------
 Plug 'lambdalisue/fern.vim'
-Plug 'lambdalisue/fern-renderer-devicons.vim'  " 已经废弃
 Plug 'lambdalisue/vim-fern-renderer-nerdfont'
 Plug 'lambdalisue/vim-nerdfont'
 
@@ -242,7 +241,7 @@ Plug 'fladson/vim-kitty', { 'tag': '*' }
 "                  vim-chatgpt
 "                  vim和chatgpt的交互式配置
 "-----------------------------------------------------------------------------------------------
-Plug 'CoderCookE/vim-chatgpt'
+" Plug 'CoderCookE/vim-chatgpt'
 
 "-----------------------------------------------------------------------------------------------
 "                  vim-ai
